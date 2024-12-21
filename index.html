@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en" >
+<head>
+  <meta charset="UTF-8">
+  <title>Untitled</title>
+  <link rel="stylesheet" href="./style.css">
+
+</head>
+<body>
+<!-- partial:index.partial.html -->
+<!DOCTYPE html>
+<html lang="pt">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Ficha de Contato - Nissan</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.16.9/xlsx.full.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf/2.4.0/jspdf.umd.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jspdf-autotable/3.5.28/jspdf.plugin.autotable.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <h1>Ficha de Contato Nissan</h1>
+        <form id="contact-form">
+            <label for="name">Nome:</label>
+            <input type="text" id="name" name="name" required>
+
+            <label for="email">Email:</label>
+            <input type="email" id="email" name="email" required>
+
+            <label for="phone">Telefone:</label>
+            <input type="tel" id="phone" name="phone" required>
+
+            <label for="vehicle">Veículo Nissan:</label>
+            <select id="vehicle" name="vehicle">
+                <option value="Qashqai">Qashqai</option>
+                <option value="Juke">Juke</option>
+                <option value="X-Trail">X-Trail</option>
+                <option value="Micra">Micra</option>
+                <option value="Leaf">Leaf</option>
+                <option value="Ariya">Ariya</option>
+                <option value="Navara">Navara</option>
+            </select>
+
+            <label for="observations">Observações:</label>
+            <textarea id="observations" name="observations"></textarea>
+
+            <button type="button" onclick="addContact()">Adicionar Contato</button>
+            <button type="button" onclick="exportSelectedToPDF()">Exportar Selecionado para PDF</button>
+            <button type="button" onclick="exportPDF()">Exportar Todos para PDF</button>
+            <button type="button" onclick="exportExcel()">Exportar Todos para Excel</button>
+            <button type="button" onclick="exportToWord()">Exportar Todos para Word</button>
+            <button type="button" onclick="printPage()">Imprimir</button>
+            <button type="button" onclick="openSchedulePopup()">Criar Reunião</button>
+            <button type="button" onclick="clearContacts()">Limpar Contactos</button>
+        </form>
+
+        <div id="contact-list">
+            <h2>Lista de Contatos</h2>
+            <table id="contacts-table">
+                <thead>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Email</th>
+                        <th>Telefone</th>
+                        <th>Veículo</th>
+                        <th>Observações</th>
+                    </tr>
+                </thead>
+                <tbody>
+                </tbody>
+            </table>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>
+<!-- partial -->
+  <script  src="./script.js"></script>
+
+</body>
+</html>
